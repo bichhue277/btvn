@@ -92,13 +92,18 @@ public class loop {
     //Bài 5: Viết method tính tổng tất cả các số nguyên tố có 2 chữ số sử dụng method viết ở bài 4.
     public static void main (String[] args)
     {
+        int tongsonguyento = tinhtongsonguyento();
+        System.out.println("Tong các so nguyen to có 2 chu so nho hon 100 la "+tongsonguyento);
+    }
+    public static int tinhtongsonguyento()
+    {
         int sum = 0;
         for (int i = 10; i < 100; i++) {
             if (checksonguyento(i)) {
                 sum=sum+i;
             }
         }
-        System.out.println("Tong các so nguyen to có 2 chu so nho hon 100 la "+sum);
+        return sum;
     }
     public static boolean checksonguyento (int input)
     {
